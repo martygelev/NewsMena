@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.Mena'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'mysql:mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    //Testing
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'org.springframework.security', name: 'spring-security-test', version: '5.1.5.RELEASE'
+
+
+
+
+}
